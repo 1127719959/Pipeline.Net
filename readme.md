@@ -68,7 +68,7 @@ var result = exceptionHandlersChain.Execute(new InvalidOperationException()); //
 ```
 由于Finally方法中定义的函数，结果将为真。
 
-##管道与责任链
+## 管道与责任链
 以下是PipelineNet中这两者之间的区别：
 
 * 责任链：
@@ -79,7 +79,7 @@ var result = exceptionHandlersChain.Execute(new InvalidOperationException()); //
  * 没有返回值;
  * 当您想要在输入上执行各种中间件时使用，例如在图像上进行过滤;
  
-##中间件
+## 中间件
 在Pipeline.Net中，中间件是一段代码的定义，它将在管道或责任链中执行。
 
 我们有四个定义中间件的接口：
@@ -92,7 +92,7 @@ var result = exceptionHandlersChain.Execute(new InvalidOperationException()); //
 
 除了那些4种中间件之间的差别，它们都具有类似的结构中，他们都的定义Run函数 ，其中，第一参数是传递进来的参数，第二个是一个Action的方法用于执行流程中的下一个中间件。重要的是要记住通过执行传入的函数，函数作为第二个参数来调用下一个中间件。
 
-##管道
+## 管道
 管道有两种：Pipeline<TParameter>和AsyncPipeline<TParameter>。两者具有相同的功能，聚合并执行一系列中间件。
 
 以下是使用三种中间件类型配置的管道示例：
@@ -134,7 +134,7 @@ Task task3 = pipeline.Execute(image3);
 
 Task.WaitAll(new Task[]{ task1, task2, task3 });
 ```
-##责任链
+## 责任链
 责任链还有两个实现：ResponsibilityChain<TParameter, TReturn>和AsyncResponsibilityChain<TParameter, TReturn>。两者具有相同的功能，聚合并执行一系列检索返回类型的中间件。
 
 与管道相比，链责任的一个区别是可以使用该Finally方法定义的回退功能。您可以为责任链设置一个函数，多次调用该方法将替换之前定义的函数。
@@ -162,7 +162,7 @@ result = await exceptionHandlersChain.Execute(new ArgumentExceptionHandler()); /
 // 如果没有匹配的中间件返回一个值，则返回返回类型的默认值，在“bool”的情况下，返回类型为false。
 result = await exceptionHandlersChain.Execute(new InvalidOperationException()); //结果将是假
 ```
-##中间件解析器
+## 中间件解析器
 您可能想知道，这个ActivatorMiddlewareResolver是什么，他是类被传递给管道和责任链的每个实例。这是它的默认实现，IMiddlewareResolver用于创建中间件类型的实例。
 在配置管道/责任链时，您需要定义中间件的类型，当流程执行时，需要实例化这些中间件，因此IMiddlewareResolver负责。您甚至可以创建自己的实现，因为 ActivatorMiddlewareResolver它只适用于无参数构造函数。
 
