@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28315.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipeline.Net.Tests", "PipelineNet.Tests\Pipeline.Net.Tests.csproj", "{2A06C563-CF29-4E80-AF27-094B5CE56CFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipeline.Net", "PipelineNet\Pipeline.Net.csproj", "{6EA45976-151B-4E47-8962-79F0F0DA1D1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A06C563-CF29-4E80-AF27-094B5CE56CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A06C563-CF29-4E80-AF27-094B5CE56CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A06C563-CF29-4E80-AF27-094B5CE56CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A06C563-CF29-4E80-AF27-094B5CE56CFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EA45976-151B-4E47-8962-79F0F0DA1D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EA45976-151B-4E47-8962-79F0F0DA1D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EA45976-151B-4E47-8962-79F0F0DA1D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EA45976-151B-4E47-8962-79F0F0DA1D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DC97C24-2EFC-4977-95A9-C78FC6CA2F3B}
+	EndGlobalSection
+EndGlobal
